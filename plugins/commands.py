@@ -21,7 +21,7 @@ from database.filters_mdb import filter_stats
 from database.users_mdb import add_user, find_user, all_users
 
 
-@trojanz.on_message(filters.command('id') & (filters.private | filters.group))
+@malluinstafollowers.on_message(filters.command('id') & (filters.private | filters.group))
 async def showid(client, message):
     chat_type = message.chat.type
 
@@ -243,12 +243,12 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("How to Deploy?", url="https://youtu.be/hkmc3e7U7R4"),
+                    InlineKeyboardButton("Join channel", url="https://t.me/malluinstafollowers"),
                     InlineKeyboardButton("About Me", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
+                    InlineKeyboardButton("Join group", url="https://t.me/malluinstaufollowers"),
+                    InlineKeyboardButton(" detail about group ", url="@Malluinstabot")
                 ]
             ]
         ),
@@ -256,7 +256,7 @@ async def help(client, message):
     )
 
 
-@trojanz.on_message(filters.command('about') & filters.private)
+@.on_message(filters.command('about') & filters.private)
 async def about(client, message):
     await message.reply_text(
         text=Script.ABOUT_MSG,
@@ -265,7 +265,7 @@ async def about(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Unlimited-Filter-Bot")
+                        "SOURCE CODE", url=" ഇപ്പ തരാം👹 ")
                 ],
                 [
                     InlineKeyboardButton("BACK", callback_data="help_data"),
